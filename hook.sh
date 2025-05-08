@@ -17,6 +17,6 @@
 
 #!/bin/bash
 
-if [ -f "$PWD/$ENV_SPECIFIC_VALUES_FILE" ]; then
-    export TF_CLI_ARGS_plan=-var-file="$PWD/$ENV_SPECIFIC_VALUES_FILE"
+if [ -f "$PWD/$ENV_SPECIFIC_VALUES_FILE.tfvars" ]; then
+    export TF_CLI_ARGS_plan=-var-file="$PWD/$ENV_SPECIFIC_VALUES_FILE.tfvars"
 fi
