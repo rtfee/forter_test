@@ -15,8 +15,16 @@
 #
 #echo "Debug: Final TF_CLI_ARGS_plan value: '$TF_CLI_ARGS_plan'"
 
+##!/bin/bash
+
+#if [ -f "$PWD/$ENV_SPECIFIC_VALUES_FILE.tfvars" ]; then
+#    export TF_CLI_ARGS_plan=-var-file="$PWD/$ENV_SPECIFIC_VALUES_FILE.tfvars"
+#fi
+
 #!/bin/bash
 
 if [ -f "$PWD/$ENV_SPECIFIC_VALUES_FILE.tfvars" ]; then
     export TF_CLI_ARGS_plan=-var-file="$PWD/$ENV_SPECIFIC_VALUES_FILE.tfvars"
 fi
+
+echo "Debug: Final TF_CLI_ARGS_plan value: '$TF_CLI_ARGS_plan'"
